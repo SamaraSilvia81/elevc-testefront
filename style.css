@@ -1,0 +1,102 @@
+/* Navbar */
+.navbar {
+  background-color: #111135 !important; /* Cor Secundária */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-weight: bold;
+  color: #f6561c !important; /* Laranja na versão web */
+  text-align: center; /* Alinhamento do texto no centro */
+  flex-grow: 1; /* Faz com que a marca ocupe o espaço disponível */
+}
+
+/* Alinha os itens da navbar ao centro */
+.navbar .navbar-nav {
+  flex-grow: 1;
+  justify-content: center; /* Centraliza os itens */
+  text-align: center; /* Garante que o texto dos itens esteja centralizado */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important; /* Cor Fonte Primária (Branca) */
+  text-align: center; /* Alinha os links ao centro */
+  margin: 0; /* Remove as margens para garantir alinhamento perfeito */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f6561c !important; /* Cor Primária (Laranja) no hover */
+}
+
+/* Ícone de Perfil */
+.profile-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff; /* Borda branca ao redor da imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc; /* Fundo cinza caso não tenha imagem */
+}
+
+.profile-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Favicon do WhatsApp e nome "GRUPO" (apenas no mobile) */
+#whatsapp-group-favicon {
+  display: none; /* Esconde por padrão em telas grandes */
+  background-color: #f6561c;
+  padding: 6px 14px; /* Ajusta o padding para dar uma forma retangular */
+  border-radius: 5px;
+}
+
+.whatsapp-favicon {
+  text-align: center;
+}
+
+.whatsapp-favicon img {
+  width: 20px; /* Ajuste para largura menor no favicon */
+  height: 20px; /* Ajuste para manter o ícone proporcional */
+}
+
+.whatsapp-favicon span {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Exibe o favicon apenas em telas pequenas (mobile) */
+@media (max-width: 767px) {
+  /* Mostra o favicon no mobile */
+  #whatsapp-group-favicon {
+    display: inline-block !important;
+  }
+
+  /* Navbar Brand: Branca no mobile e maior tamanho de texto */
+  .navbar-brand {
+    color: #fff !important; /* Branca no mobile */
+    font-size: 1.75rem; /* Aumento do tamanho do texto */
+  }
+
+  /* Ajuste do favicon no mobile (formato retangular e menor) */
+  .whatsapp-favicon img {
+    width: 25px; /* Ajuste para manter a largura do ícone menor */
+    height: 25px; /* Mantém o ícone proporcional */
+  }
+
+  /* Ajuste do tamanho do fundo do favicon para ser mais largo */
+  #whatsapp-group-favicon {
+    padding: 6px 20px; /* Ajusta a largura para ser mais retangular */
+  }
+
+  /* Adiciona um espaçamento para descer o conteúdo da navbar-collapse no mobile */
+  .navbar-collapse {
+    margin-top: 20px; /* Ajuste conforme necessário */
+  }
+}
